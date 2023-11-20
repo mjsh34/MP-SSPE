@@ -1,0 +1,25 @@
+{
+    "nn_architecture": "MSP",
+    "epochs": 500,
+
+    "loss": "R6DNORM+MPJPE",
+    "input_velocities": true,
+    "input_angular_velocities": true,
+    "input_global_joint_positions": true,
+    "normalise_global_joint_positions": true,
+    "normalise_global_joint_positions_divbystd": false,
+
+    "input_motion_embeddings": true,
+    "input_motion_embeddings__reduced_dim": 0,
+
+    "preprocessed_motion_embeddings_base_path": "batches/RecSplit_me/",
+    "validation_preprocessed_motion_embeddings_base_path": "batches/RecSplit_me/",
+    "motionclip_checkpoint_path_for_guidance": "SMPL/MotionCLIP/checkpoints/paper_0200.pth.tar",
+
+    "loss_multiplier_MOTION_EMBEDDING": 0.1,
+
+    "msp_decoder": "LastPenultimateLayerStabilizer",
+
+    "window_size": 80,
+    "loading_window_size": 84
+}

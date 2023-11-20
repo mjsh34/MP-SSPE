@@ -1,0 +1,36 @@
+{
+	"body_data_root_directory": "./amass_datasets",
+	"body_models": {
+		"smpl": {
+			"male": "./SMPL/npz_models/basicmodel_m_lbs_10_207_0_v1.0.0.npz",
+			"female": "./SMPL/npz_models/basicModel_f_lbs_10_207_0_v1.0.0.npz"
+		},
+		"smplh": {
+			"male": "./SMPL/mano_v1_2/models/SMPLH_male.pkl",
+			"female": "./SMPL/mano_v1_2/models/SMPLH_female.pkl"
+		},
+		"smplx": {
+			"male": "./SMPL/smplx_models/SMPLX_FEMALE.npz",
+			"female": "./SMPL/smplx_models/SMPLX_MALE.npz",
+			"neutral": "./SMPL/smplx_models/SMPLX_NEUTRAL.npz"
+		}
+	},
+	"root_directory_suffixes": {
+		"preprocessing": "_preprocessed_batch_new"
+	},
+
+	"model_config": {
+		"nsamples": 10,
+		"epochs": 150,
+		"learning_rate": 0.002,
+		"window_size": 20,
+		"log_every_n_global_steps": 50,
+		"batch_size": 128,
+		"start_evaluation_from_frame": 80,
+    		"shuffle_opts": {
+    		    "shuffle_everything": true,
+    		    "shuffle_windows_offsets_every_n_epochs": 8
+    		},
+		"motionclip_checkpoint_path_for_otf": "SMPL/MotionCLIP/checkpoints/paper_0180_sparsedf.pth.tar"
+	}
+}

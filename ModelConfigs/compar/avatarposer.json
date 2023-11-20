@@ -1,0 +1,15 @@
+{
+    "nn_architecture": "AvatarPoser",
+    "loss": "MPJPE",
+    "input_velocities": true,
+    "input_angular_velocities": true,
+    "input_global_joint_positions": true,
+    "normalise_global_joint_positions": false,
+    "normalise_global_joint_positions_divbystd": false,
+
+    "loading_window_size": 84,
+    "checkpoint_avatarposer": "./SMPL/AvatarPoser/checkpoints/126456_G.pth",
+
+    "input_motion_embeddings": false,
+    "motion_embedding_guidance": null
+}
